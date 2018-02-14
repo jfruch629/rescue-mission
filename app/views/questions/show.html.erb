@@ -1,0 +1,64 @@
+<header>
+  rescue mission<hr>
+</header>
+
+<h4 id="notice"><%= notice %></h4>
+
+<h2><lighter><%= @question.title %></lighter></h2>
+
+
+<div class="description">
+<%= @question.description %>
+<br /><br /><br />
+</div>
+<div class="timestamp">
+created at: <%= @question.created_at %><br />
+<%= link_to 'Edit', edit_question_path(@question), class: "button", id: "awesome-edit-link" %><br />
+<%= link_to "Delete", question_path(@question),
+                         :data => {:confirm => "You sure?",
+                                   :method => "delete"} %>
+</div>
+<br /><br />
+<HR SIZE="10"  style="background-color: #858C93;">
+<table>
+  <thead>
+    <tr>
+
+
+      <th><div class="little_header">
+        Most Recent Answers  </div></th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+<div class="answers">
+  <% if !(@question.answers.nil?) %>
+    <tbody>
+      <% @question.answers.each do |answer| %>
+        <tr>
+          <td>
+            <hr><br />
+            <%= answer.content %>
+            <br /><br /><br />
+            <div class="timestamp">
+              answered on: <%=answer.created_at %>
+            </div>
+          </td>
+        </tr>
+      <% end %>
+    <% end %>
+  </tbody>
+</table>
+</div>
+
+
+<HR SIZE="10"  style="background-color: #858C93;">
+
+<%= render 'answers/form', answer: @answer %>
+
+<br />
+<tbody>
+  <tr>
+    <td><%= link_to 'Back to all questions', questions_path %></td>
+  </tr>
+</tbody>

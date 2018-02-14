@@ -1,0 +1,17 @@
+<br >
+<br />
+<div class="new_answer_header">
+<h3>New Answer for <%= @question.title%></h3>
+<div>
+<br >
+
+<%= form_for([@question, @answer]) do |f| %>
+  <div class="field">
+    <%= f.text_field :content %>
+  </div>
+  <br />
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>
+<br />

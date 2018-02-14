@@ -1,15 +1,136 @@
 /*
- * This is a manifest file that'll be compiled into application.css, which will include all the files
- * listed below.
- *
- * Any CSS and SCSS file within this directory, lib/assets/stylesheets, or any plugin's
- * vendor/assets/stylesheets directory can be referenced here using a relative path.
- *
- * You're free to add application-wide styles to this file and they'll appear at the bottom of the
- * compiled file so the styles you add here take precedence over styles defined in any other CSS/SCSS
- * files in this directory. Styles in this file should be added after the last require_* statement.
- * It is generally better to create a new file per style scope.
- *
- *= require_tree .
- *= require_self
- */
+* This is a manifest file that'll be compiled into application.css, which will include all the files
+* listed below.
+*
+* Any CSS and SCSS file within this directory, lib/assets/stylesheets, or any plugin's
+* vendor/assets/stylesheets directory can be referenced here using a relative path.
+*
+* You're free to add application-wide styles to this file and they'll appear at the bottom of the
+* compiled file so the styles you add here take precedence over styles defined in any other CSS/SCSS
+* files in this directory. Styles in this file should be added after the last require_* statement.
+* It is generally better to create a new file per style scope.
+*
+*= require_tree .
+*= require_self
+*/
+body {
+  background-color: #FFFFFF;
+  color: #333;
+  margin: 33px;
+  font-family: 'Helvetica Neue', sans-serif;
+  font-size: 13px;
+  line-height: 18px;
+}
+
+p, ol, ul, td {
+  color: #685206; font-family: 'Helvetica Neue', sans-serif; font-size: 14px; line-height: 24px; margin: 0 0 24px; text-align: justify; text-justify: inter-word;
+}
+
+h2 {
+  color: #A62C39;
+}
+
+pre {
+  background-color: #eee;
+  padding: 10px;
+  font-size: 11px;
+}
+
+a {
+  color: #000;
+
+ &:visited {
+   color: #666;
+ }
+
+ &:hover {
+   color: #fff;
+   background-color: #000;
+ }
+}
+
+th {
+  padding-bottom: 5px;
+}
+
+td {
+  padding: 0 5px 7px;
+}
+
+div {
+ &.field, &.actions {
+   margin-bottom: 10px;
+ }
+}
+
+#notice {
+  color: green;
+}
+
+.field_with_errors {
+ padding: 2px;
+ display: table;
+ color: red;
+}
+
+#error_explanation {
+  width: 450px;
+  border: 2px solid red;
+  padding: 7px 7px 0;
+  margin-bottom: 20px;
+  background-color: #f0f0f0;
+
+
+ h2 {
+   text-align: left;
+   font-weight: bold;
+   padding: 5px 5px 5px 15px;
+   font-size: 12px;
+   margin: -7px -7px 0;
+   background-color: #c00;
+   color: #fff;
+ }
+
+ ul li {
+   font-size: 12px;
+   list-style: square;
+ }
+}
+
+label {
+  display: block;
+}
+
+.errors {
+  color: red;
+}
+
+.description {
+  text-align: left;
+  background-color: #EFF0F1;
+  padding-top: .75em;
+  padding-left: .5em;
+  padding-bottom: 2em;
+  padding-right: 2em;
+}
+
+.new_answer_header{
+  color: #A62C39;
+}
+
+.little_header {
+  color: black;
+}
+
+.answers {
+  color: #DE656B;
+}
+
+.timestamp {
+  color: gray;
+}
+
+header {
+color: #7c795d; font-family: 'Trocchi', serif; font-size: 45px; font-weight: normal; line-height: 48px; margin: 0;
+padding-bottom: .5em;
+}

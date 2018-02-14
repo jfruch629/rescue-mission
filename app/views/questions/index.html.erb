@@ -1,0 +1,30 @@
+
+<header>
+  rescue mission<hr>
+</header>
+
+<p id="notice"><%= notice %></p>
+
+<table>
+  <thead>
+    <tr>
+      <th><h2>Most Recent Questions</h2></th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <% @questions.each do |question| %>
+  <tbody>
+      <tr>
+        <td><%= question.title %></td>
+        <td><%= link_to 'Show', question %></td>
+        <td><div class="timestamp">
+          created at: <%= question.created_at %>
+        </div></td>
+      </tr>
+      </tbody>
+      <% end %>
+</table>
+
+<br>
+<%= link_to 'Have a question?', new_question_path %>
